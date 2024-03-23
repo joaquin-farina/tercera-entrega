@@ -1,0 +1,39 @@
+<div class="Users">
+    <h1>Usuarios:</h1>
+    <div id="users">
+        <table class="tableUsers">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Perfil</th>
+                    <th>Estado</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each users}}
+                <tr>
+                    <td>{{firstname}}</td>
+                    <td>{{lastname}}</td>
+                    <td>{{email}}</td>
+                    <td>{{role}}</td>
+                    <td>{{isActive}}</td>
+                    <td>
+                        <button onclick="editUser()">Editar</button>
+                        <button onclick="deleteUser()">delete</button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+    </div>
+    <label id="page">{{page}}</label>
+</div>
+
+{{!--
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.all.min.js"></script> --}}
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>

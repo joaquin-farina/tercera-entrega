@@ -1,0 +1,19 @@
+<div>
+    <h1>Carrito</h1>
+    <div class="cart-item">
+        {{#each payload}}
+        <div class="cart-item-details">
+            <p>Product ID: {{_id}}</p>
+            <p>Title: {{title}}</p>
+            <p>Description: {{description}}</p>
+            <p>Price: ${{price}}</p>
+            <p>Cantidad: {{quantity}}</p>
+            <p>Total: ${{total}}</p>
+        </div>
+        {{/each}}
+    </div>
+    <a href="/api/carts/{{cid}}/purchase">Finalizar compra</a>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>
