@@ -41,7 +41,7 @@ router
 
         const to = 'joaquinramiro98@gmail.com'
         const subject = 'Email de prueba'
-        const html = '<div><h1>Es es un email de prueba</h1></div>'
+        const html = '<div><h1>email de prueba</h1></div>'
 
         sendMail(to, subject, html)
         
